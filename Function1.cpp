@@ -30,7 +30,20 @@ int main()
     int sum = add(10, 20);
     std::cout << "Addition of 10 & 20 = " << sum << std::endl;
 
-    
+    /* Unsafe because larger type double is converted to smaller type int
+This will result into loss of precision or loss of data
+*/
+
+    int sum = add(10.5, 20.6);//loss of precision
+    std::cout << "Addition of 10 & 20 = " << sum << std::endl;
+
+
+    result = add(10.5, 20.6);//loss of precision
+    std::cout << "Addition of 10.5 & 20.6 = " << result << std::endl;
+
+    result = add(7000000000.5, 2000000000.4);//loss of data
+    std::cout << "Addition of 7000000000.5 & 2000000000.4 = " << result << std::endl;
+
     
     
     
