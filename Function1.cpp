@@ -8,7 +8,7 @@ int abhi(int i1n);
 //int foo(int);
 double avg(double, double);
 int add(int i1n, int i2n);
-
+void printOddNumber(int number_of_odd_values);
 int main()
 {
     doit();        //function Call
@@ -44,7 +44,7 @@ This will result into loss of precision or loss of data
     result = add(7000000000.5, 2000000000.4);//loss of data
     std::cout << "Addition of 7000000000.5 & 2000000000.4 = " << result << std::endl;
 
-    
+    printOddNumber(5);
     
     
     
@@ -80,4 +80,13 @@ double avg(double d1n, double d2n) {
 
 int add(int i1n, int i2n) {
     return (i1n + i2n);
+}
+
+void printOddNumber(int number_of_odd_values)
+{
+    std::cout << "The first " << number_of_odd_values << "odd values are :\n";
+    for (int odd{ 1 }; odd <= (2 * number_of_odd_values); odd += 2) {
+        std::cout << odd << " , " << std::endl;
+    }
+    std::cout << std::endl;
 }
